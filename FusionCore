@@ -1,0 +1,20 @@
+class FusionCore:
+    def __init__(self):
+        self.output_energia = 0 # Escala de Gigawatts (GW)
+        self.eficiencia = 0.95  # 95% de conversão direta
+
+    def converter_fusao_em_eletricidade(self, taxa_reacao):
+        """
+        Converte partículas carregadas diretamente em fluxo elétrico.
+        Evita o ciclo termodinâmico (calor -> vapor -> turbina).
+        """
+        print("[*] Ajustando confinamento magnético...")
+        # A física da conversão direta
+        energia_gerada = taxa_reacao * self.eficiencia
+        
+        self.output_energia = energia_gerada
+        return f"Energia de Fusão Direta ativa: {self.output_energia} GW produzidos."
+
+# --- Integração com o seu NaveOS ---
+drive = FusionCore()
+print(drive.converter_fusao_em_eletricidade(500)) # Exemplo com taxa de reação 500
