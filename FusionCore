@@ -18,3 +18,11 @@ class FusionCore:
 # --- Integração com o seu NaveOS ---
 drive = FusionCore()
 print(drive.converter_fusao_em_eletricidade(500)) # Exemplo com taxa de reação 500
+
+
+def sistema_arrefecimento_marinho(self, profundidade):
+    # A temperatura da agua em grandes profundidades (~4°C) 
+    # otimiza a estabilidade dos supercondutores do nucleo.
+    temperatura_ambiente = 4.0 
+    print(f"[NUCLEO] Troca termica otimizada a {profundidade}m.")
+    self.eficiencia += 0.02 # Pequeno ganho de eficiencia por estabilidade termica
