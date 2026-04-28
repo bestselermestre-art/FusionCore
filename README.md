@@ -8,3 +8,5 @@ from FusionCore import converter_fusao_em_eletricidade
 ## O Escâner pede energia ao Núcleo
 energia_disponivel = converter_fusao_em_eletricidade(500)
 print(f"ATM iniciando busca com {energia_disponivel}")
+
+## O uso do FusionCore em um submarino resolve o maior gargalo da exploração oceânica: a autonomia.
