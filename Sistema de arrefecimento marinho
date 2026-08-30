@@ -1,0 +1,32 @@
+import time
+
+class FusionCore:
+    def __init__(self):
+        self.output_energia = 0   # Escala de Gigawatts (GW)
+        self.eficiencia = 0.95    # 95% de conversão direta
+
+    def converter_fusao_em_eletricidade(self, taxa_reacao):
+        """
+        Converte partículas carregadas diretamente em fluxo elétrico.
+        Evita o ciclo termodinâmico (calor -> vapor -> turbina).
+        """
+        print("[*] Ajustando confinamento magnético...")
+        energia_gerada = taxa_reacao * self.eficiencia
+        self.output_energia = energia_gerada
+        return f"Energia de Fusão Direta ativa: {self.output_energia} GW produzidos."
+
+    def sistema_arrefecimento_marinho(self, profundidade):
+        """
+        Simula o uso da água fria em grandes profundidades (~4°C)
+        para estabilizar supercondutores e aumentar eficiência.
+        """
+        temperatura_ambiente = 4.0
+        print(f"[NUCLEO] Troca térmica otimizada a {profundidade}m (Temp: {temperatura_ambiente}°C).")
+        self.eficiencia += 0.02
+        return f"Eficiência ajustada para {self.eficiencia*100:.1f}%."
+
+# --- Exemplo de Execução ---
+drive = FusionCore()
+print(drive.converter_fusao_em_eletricidade(500))   # Conversão inicial
+print(drive.sistema_arrefecimento_marinho(3000))    # Arrefecimento em 3000m
+print(drive.converter_fusao_em_eletricidade(500))   # Conversão após ajuste
